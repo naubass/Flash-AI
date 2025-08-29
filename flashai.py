@@ -50,7 +50,7 @@ def main():
         st.session_state['messages'] = []
 
     # setup API key google
-    api_key = os.environ.get('GOOGLE_API_KEY_NEW')
+    api_key =  st.secrets('GOOGLE_API_KEY_NEW')
     client = genai.Client(api_key=api_key)
     MODEL_ID = "gemini-2.5-flash"
 
